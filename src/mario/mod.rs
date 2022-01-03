@@ -8,7 +8,7 @@ use acmd::{acmd, acmd_func};
 #[acmd_func(
     battle_object_category = BATTLE_OBJECT_CATEGORY_FIGHTER, 
     battle_object_kind = FIGHTER_KIND_MARIO, 
-    animation = "attack_lw_4",
+    animation = "attack_lw4",
     animcmd = "game_attacklw4")]
 pub fn mario_dsmash(fighter: &mut L2CFighterCommon) {
     acmd!({
@@ -63,8 +63,8 @@ pub fn mario_sideb(fighter: &mut L2CFighterCommon) {
         frame(Frame=12)
         if(is_excute){
             WorkModule::on_flag(Flag=FIGHTER_MARIO_STATUS_SPECIAL_S_FLAG_SPECIAL_FALL)
-            ATTACK(ID=0, Part=0, Bone=hash40("top"), Damage=7.0, Angle=110, KBG=100, FKB=80, BKB=0, Size=7.5, X=0.0, Y=6.7, Z=9.7, X2=LUA_VOID, Y2=LUA_VOID, Z2=LUA_VOID, Hitlag=10.0, SDI=1.0, Clang_Rebound=ATTACK_SETOFF_KIND_OFF, FacingRestrict=ATTACK_LR_CHECK_F, SetWeight=false, ShieldDamage=4, Trip=0.0, Rehit=0, Reflectable=false, Absorbable=false, Flinchless=false, DisableHitlag=false, Direct_Hitbox=true, Ground_or_Air=COLLISION_SITUATION_MASK_GA, Hitbits=COLLISION_CATEGORY_MASK_ALL, CollisionPart=COLLISION_PART_MASK_ALL, FriendlyFire=false, Effect=hash40("collision_attr_turn"), SFXLevel=ATTACK_SOUND_LEVEL_M, SFXType=COLLISION_SOUND_ATTR_MARIO_MANT, Type=ATTACK_REGION_OBJECT)
-            ATTACK(ID=1, Part=0, Bone=hash40("top"), Damage=7.0, Angle=110, KBG=100, FKB=80, BKB=0, Size=5.0, X=0.0, Y=6.7, Z=5.0, X2=LUA_VOID, Y2=LUA_VOID, Z2=LUA_VOID, Hitlag=10.0, SDI=1.0, Clang_Rebound=ATTACK_SETOFF_KIND_OFF, FacingRestrict=ATTACK_LR_CHECK_F, SetWeight=false, ShieldDamage=4, Trip=0.0, Rehit=0, Reflectable=false, Absorbable=false, Flinchless=false, DisableHitlag=false, Direct_Hitbox=true, Ground_or_Air=COLLISION_SITUATION_MASK_GA, Hitbits=COLLISION_CATEGORY_MASK_ALL, CollisionPart=COLLISION_PART_MASK_ALL, FriendlyFire=false, Effect=hash40("collision_attr_turn"), SFXLevel=ATTACK_SOUND_LEVEL_M, SFXType=COLLISION_SOUND_ATTR_MARIO_MANT, Type=ATTACK_REGION_OBJECT)
+            ATTACK(ID=0, Part=0, Bone=hash40("top"), Damage=7.0, Angle=110, KBG=100, FKB=80, BKB=0, Size=7.5, X=0.0, Y=6.7, Z=9.7, X2=LUA_VOID, Y2=LUA_VOID, Z2=LUA_VOID, Hitlag=1.0, SDI=1.0, Clang_Rebound=ATTACK_SETOFF_KIND_OFF, FacingRestrict=ATTACK_LR_CHECK_F, SetWeight=false, ShieldDamage=4, Trip=10.0, Rehit=0, Reflectable=false, Absorbable=false, Flinchless=false, DisableHitlag=false, Direct_Hitbox=true, Ground_or_Air=COLLISION_SITUATION_MASK_GA, Hitbits=COLLISION_CATEGORY_MASK_ALL, CollisionPart=COLLISION_PART_MASK_ALL, FriendlyFire=false, Effect=hash40("collision_attr_turn"), SFXLevel=ATTACK_SOUND_LEVEL_M, SFXType=COLLISION_SOUND_ATTR_MARIO_MANT, Type=ATTACK_REGION_OBJECT)
+            ATTACK(ID=1, Part=0, Bone=hash40("top"), Damage=7.0, Angle=110, KBG=100, FKB=80, BKB=0, Size=5.0, X=0.0, Y=6.7, Z=5.0, X2=LUA_VOID, Y2=LUA_VOID, Z2=LUA_VOID, Hitlag=1.0, SDI=1.0, Clang_Rebound=ATTACK_SETOFF_KIND_OFF, FacingRestrict=ATTACK_LR_CHECK_F, SetWeight=false, ShieldDamage=4, Trip=10.0, Rehit=0, Reflectable=false, Absorbable=false, Flinchless=false, DisableHitlag=false, Direct_Hitbox=true, Ground_or_Air=COLLISION_SITUATION_MASK_GA, Hitbits=COLLISION_CATEGORY_MASK_ALL, CollisionPart=COLLISION_PART_MASK_ALL, FriendlyFire=false, Effect=hash40("collision_attr_turn"), SFXLevel=ATTACK_SOUND_LEVEL_M, SFXType=COLLISION_SOUND_ATTR_MARIO_MANT, Type=ATTACK_REGION_OBJECT)
         }
         frame(Frame=15)
         if(is_excute){
