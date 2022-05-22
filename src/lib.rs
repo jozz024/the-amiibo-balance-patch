@@ -1,9 +1,11 @@
 #![feature(concat_idents)]
 #![feature(proc_macro_hygiene)]
+#![feature(asm)]
+#![feature(shrink_to)]
 
-mod mario;
+mod fighters;
 
 #[skyline::main(name = "amiibo-balance-patch")]
 pub fn main() {
-    mario::install();
+    fighters::install();
 }
