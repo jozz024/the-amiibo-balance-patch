@@ -6,6 +6,7 @@ use smash::lua2cpp::*;
 use smash::app::lua_bind::{AttackModule, WorkModule, ArticleModule, DamageModule};
 use smashline::*;
 use smash_script::*;
+use std::arch::asm;
 
 #[acmd_script(
     agent = "link",
