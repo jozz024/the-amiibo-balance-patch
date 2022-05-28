@@ -1,6 +1,6 @@
 use smash::app::sv_animcmd::*;
 use smash::phx::Hash40;
-use smash;
+
 use smash::app::*;
 use smash::lib::lua_const::*;
 use smash::lua2cpp::*;
