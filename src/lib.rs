@@ -2,7 +2,6 @@
 #![feature(proc_macro_hygiene)]
 #[allow(non_snake_case)]
 #[allow(unused_macros)]
-
 mod fighters;
 mod hooks;
 

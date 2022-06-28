@@ -1,6 +1,6 @@
-mod mario;
 mod donkey_kong;
 mod link;
+mod mario;
 mod samus;
 
 pub fn install() {
