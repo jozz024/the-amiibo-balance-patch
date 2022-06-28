@@ -1,0 +1,42 @@
+name: Rust Build
+
+env:
+  PLUGIN_NAME: 'libamiibo_balance_patch.nro'
+  VERSION: 'v0.1.0'
+
+on:
+  push:
+    branches: [ master ]
+jobs:
+  plugin:
+    runs-on: ubuntu-latest
+    container: jugeeya/cargo-skyline:3.0.0-dkp-beta
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build release NRO
+        run: |
+          PATH=$PATH:/root/.cargo/bin:/opt/devkitpro/devkitA64/bin /root/.cargo/bin/cargo-skyline skyline build --release
+        env:
+          HOME: /root
+      - name: check event type
+        run: echo ${{ github.event_name }}
+
+      - name: install rustfmt
+        uses: actions-rs/toolchain@v1
+        if: github.event_name == 'push'
+        with:
+          toolchain: stable
+          components: rustfmt
+          override: true
+
+      # format if necessary
+      - uses: mbrobbel/rustfmt-check@master
+        if: github.event_name == 'push'
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload plugin artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: plugin
+          path: target/aarch64-skyline-switch/release/${{env.PLUGIN_NAME}}
