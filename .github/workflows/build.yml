@@ -12,12 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     container: jugeeya/cargo-skyline:3.0.0-dkp-beta
     steps:
-      - uses: actions/checkout@v2
-      - name: Build release NRO
-        run: |
-          PATH=$PATH:/root/.cargo/bin:/opt/devkitpro/devkitA64/bin /root/.cargo/bin/cargo-skyline skyline build --release
-        env:
-          HOME: /root
       - name: check event type
         run: echo ${{ github.event_name }}
 
@@ -34,6 +28,13 @@ jobs:
         if: github.event_name == 'push'
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+      - name: Build release NRO
+        run: |
+          PATH=$PATH:/root/.cargo/bin:/opt/devkitpro/devkitA64/bin /root/.cargo/bin/cargo-skyline skyline build --release
+        env:
+          HOME: /root
 
       - name: Upload plugin artifact
         uses: actions/upload-artifact@v2
