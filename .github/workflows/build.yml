@@ -12,23 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     container: jugeeya/cargo-skyline:3.0.0-dkp-beta
     steps:
-      - name: check event type
-        run: echo ${{ github.event_name }}
-
-      - name: install rustfmt
-        uses: actions-rs/toolchain@v1
-        if: github.event_name == 'push'
-        with:
-          toolchain: stable
-          components: rustfmt
-          override: true
-
-      # format if necessary
-      - uses: mbrobbel/rustfmt-check@master
-        if: github.event_name == 'push'
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - uses: actions/checkout@v2
       - name: Build release NRO
         run: |
