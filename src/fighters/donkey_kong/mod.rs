@@ -15,7 +15,7 @@ use smash::app::lua_bind::{AttackModule, WorkModule, HitModule};
     category = ACMD_GAME)]
 unsafe fn dk_upb(fighter: &mut L2CAgentBase) {
     let lua_state = fighter.lua_state_agent;
-        frame(lua_state, 5.0);
+    frame(lua_state, 5.0);
     if macros::is_excute(fighter) {
         damage!(fighter, *MA_MSC_DAMAGE_DAMAGE_NO_REACTION, *DAMAGE_NO_REACTION_MODE_ALWAYS, 0);
     }

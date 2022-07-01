@@ -4,6 +4,7 @@ mod link;
 mod samus;
 mod dark_samus;
 mod yoshi;
+mod kirby;
 
 pub fn install() {
     mario::install();
@@ -12,4 +13,5 @@ pub fn install() {
     samus::install();
     dark_samus::install();
     yoshi::install();
+    kirby::install();
 }
