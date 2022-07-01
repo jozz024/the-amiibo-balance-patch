@@ -3,6 +3,7 @@ mod donkey_kong;
 mod link;
 mod samus;
 mod dark_samus;
+mod yoshi;
 
 pub fn install() {
     mario::install();
@@ -10,4 +11,5 @@ pub fn install() {
     link::install();
     samus::install();
     dark_samus::install();
+    yoshi::install();
 }
