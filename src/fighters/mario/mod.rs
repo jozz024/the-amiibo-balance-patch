@@ -7,7 +7,7 @@ use smash::lua2cpp::*;
 use smash::app::lua_bind::{AttackModule, WorkModule, FighterAreaModuleImpl, MotionModule, ArticleModule};
 use smashline::*;
 use smash_script::*;
-use std::arch::asm;
+
 
 #[acmd_script(
     agent = "mario",

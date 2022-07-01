@@ -6,7 +6,7 @@ use smash::lua2cpp::*;
 use smash::app::lua_bind::{AttackModule, WorkModule, VisibilityModule};
 use smashline::*;
 use smash_script::*;
-use std::arch::asm;
+
 use std::convert::TryInto;
 
 #[acmd_script(

@@ -7,7 +7,7 @@ use smash::lua2cpp::*;
 use smashline::*;
 use smash_script::*;
 use smash::app::lua_bind::{AttackModule, WorkModule, HitModule};
-use std::arch::asm;
+
 
 #[acmd_script(
     agent = "donkey",
